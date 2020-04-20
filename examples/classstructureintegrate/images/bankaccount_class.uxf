@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>30</y>
+      <w>430</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>BankAccount
+--
+- accountNumber: String
+- owner: String
+- balance: int
+--
++ BankAccount(accountNumber: String, owner: String, balance: int)
++ deposit(amount: int)
++ withdraw(amount: int)
++ transfer(to: BankAccount, amount: int)
++ getInfo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

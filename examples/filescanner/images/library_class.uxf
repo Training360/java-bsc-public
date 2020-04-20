@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>10</y>
+      <w>450</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Book
+--
+- regNum: String
+- author: String
+- title: String
+- yearOfPublish: int
+--
++ Book(regNum: String, author: String, title: String, yearOfPublish: int)
++ getRegNum(): String
++ getAuthor(): String
++ getTitle(): String
++ getYearOfPublish(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Library
+--
+--
++ loadFromFile()
++ getBooks(): List&lt;Book&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>70</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+- books
+m1=*</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+</diagram>

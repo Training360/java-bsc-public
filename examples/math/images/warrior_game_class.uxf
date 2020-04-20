@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Point
+--
+- x: int
+- y: int
+--
++ Point(x: int, y: int)
++ getX(): int
++ getY(): int
++ distance(other: Point): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>30</y>
+      <w>190</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Warrior
+--
+- name: String
+- stamina: int
+- skill: double
+--
++ Warrior(String, Point)
++ getPosition(): Point
++ move(Warrior)
++ attack(Warrior)
++ distance(Warrior): double
++ isAlive(): boolean
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+- position</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+</diagram>

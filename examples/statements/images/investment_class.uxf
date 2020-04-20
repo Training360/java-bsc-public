@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>30</y>
+      <w>260</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Investment
+--
+- cost: double
+- fund: int
+- interestRate: int
+- active: boolean
+--
++ Investment(fund: int, interestRate: int)
++ getFund(): int
++ getYield(days: int): double
++ close(days: int): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

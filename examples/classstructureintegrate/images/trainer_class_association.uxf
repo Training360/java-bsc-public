@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>130</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>TrainerMain
+--
+_+ main(args: String[])_
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>150</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>80</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Trainer
+--
+name: String
+yearOfBirth: int
+--
++ Trainer(name: String, yearOfBirth: int)
++ getName(): String
++ setName(name: String)
++ getYearOfBirth():int
++ setYearOfBirth(yearOfBirth: int)
++ getAge(year: int): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>100</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Trainer
+--
+name: String
+yearOfBirth: int
+--
++ Trainer(name: String, yearOfBirth: int)
++ getName(): String
++ setName(name: String)
++ getYearOfBirth(): int
++ setYearOfBirth(yearOfBirth: int)
++ getAge(year: int): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
