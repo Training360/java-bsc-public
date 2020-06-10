@@ -1,4 +1,4 @@
-package stringmethods;
+package stringmethods.filename;
 
 public class FileNameManipulator {
 

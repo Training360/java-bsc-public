@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>30</y>
+      <w>540</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FileNameManipulator
+--
+--
++ findLastCharacter(str: String): char
++ findFileExtension(fileName: String): String
++ identifyFilesByExtension(ext: String, fileName: String): boolean
++ compareFilesByName(searchedFileName: String, actualFileName: String): boolean
++ changeExtensionToLowerCase(fileName: String): String
++ replaceStringPart(fileName: String, present: String, target: String): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

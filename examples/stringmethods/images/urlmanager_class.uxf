@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>90</y>
+      <w>280</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>UrlManager
+--
+- protocol: String
+- port: Integer
+- host: String
+- path: String
+- query: String
+--
++ UrlManager(url: String)
++ getProtocol(): String
++ getPort(): Integer
++ getHost(): String
++ getPath(): String
++ hasProperty(key:String): boolean
++ getProperty(key: String): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,4 +1,4 @@
-package stringmethods;
+package stringmethods.filename;
 
 import org.junit.Rule;
 import org.junit.Test;

@@ -6,7 +6,7 @@ A kivételek hierarchiájának tetején a `java.lang.Throwable` osztály áll. K
 *	`java.lang.Error` olyan hiba, amiből nem lehet visszaállni (nem kötelező kezelni)
 		`java.lang.Exception` olyan kivétel, amit kezelni kell vagy lehet - ennek leszármazottja a `java.lang.RuntimeException`, melyet nem kötelező kezelni
 
-![Exception hierarchia](images/hierarchy_of_java_exceptions.png)
+![Exception hierarchia](images/exceptions.png)
 
 ## try-catch szerkezet
 

@@ -1,8 +1,5 @@
 # Referenciák
 
-Egy referencia típusú változóban ténylegesen nem maga az objektum, hanem csak egy 
-rá mutató referencia van.
-
 A JVM a memóriát két fő területre bontja: **stack** és **heap**. A stackben minden 
 metódus külön területet kap, amelyben a paramétereit és a lokális változóit tárolja. 
 Ez olyan, mintha egy saját fiókos szekrénye lenne címkézhető fiókokkal. Amikor 
@@ -10,6 +7,8 @@ deklarálunk egy változót, akkor a változó neve egy ilyen "fiók" címkéje 
 változó értéke pedig bekerül a fiókba. Innen később ki tudjuk olvasni, illetve 
 le is tudjuk cserélni. Primitív típusú változó esetén a valódi értéke kerül ide, 
 osztály típusú esetén pedig egy referencia a létrejött objektumra vagy `null`. 
+Egy referencia típusú változóban tehát ténylegesen nem maga az objektum, hanem csak egy 
+rá mutató referencia van.
 Az objektumot szintén egy kis fiókos szekrényként képzelhetjük el egy hatalmas raktárban 
 a heapen. Az objektum attribútumai ezért már a heapre kerülnek. Ha ezek primitív 
 típusúak, akkor közvetlen az objektum területére, ha referencia típusúak, akkor 
@@ -20,13 +19,13 @@ a végpontjában egy objektum áll.
 Lássunk egy példát!
 
 ```java
-public class Person {
+public class Trainer {
     private String name;
-    private int age;
+    private int yearOfBirth;
     
-    public Person(String name, int age) {
+    public Person(String name, int yearOfBirth) {
         this.name = name;
-        this.age = age;
+        this.yearOfBirth = yearOfBirth;
     }
     
     //Getter, setter metódusok
@@ -34,17 +33,33 @@ public class Person {
 
 public class Main {
     public static void main(String[] args) {
-        int x = 8;
-        Person john = new Person("John Doe", 37);
+        int yearOfBirth = 1980;
+        
+        String employeeName = "John Doe";
+        
+        Employee jack = new Employee("Jack Doe", 1970);  
     }
 }
 ```
 
-![Stack és heap](images/call_stack_and_heap_references.png)
+Ekkor a `yearOfBirth` változó és annak értéke, az `1980` a stacken helyezkedik el.
+A `John Doe` szöveg, mivel az egy `String` objektum, a heapen kerül eltárolásra,
+de a rá mutató `employeeName` változó értéke, azaz a referencia a stacken kerül eltárolásra.
 
-Amikor két változót operátorokkal hasonlítunk össze, akkor az értéküket, azaz a 
-"fiók" tartalmát hasonlítjuk össze. Az `==` operátort ezért csak primitív típusoknál 
-használjuk, hiszen objektumok esetén azok referenciáját hasonlítja össze, nem az állapotát.
+Az `Employee` objektum a heapen kerül letárolásra, míg a rá mutató `jack` változó,
+azaz a referencia a stacken.
+
+Ami még érdekes, hogy az `Employee` egyik attribútuma, a `name` maga is 
+referencia típusú, azaz egy másik, `String` objektumra mutat.
+
+Amikor két változót a `==` operátorral hasonlítunk össze, akkor azok értékértékeit hasonlítjuk össze. 
+Ez primitív típusoknál maga az érték, míg referencia típus esetén maga a referencia az érték.
+Ezért referencia típusok összehasonlítása azt vizsgálja, hogy a két referencia ugynarra az
+objektumra mutat-e, és nem azt, hogy a kettő állapota megegyezik-e.
+
+Egy osztály metódusán belül a példányra a `this` kulcsszóval lehet hivatkozni.
+Ezt főleg akkor használjuk, ha a példány egy attribútumát elfedi egy lokális
+változó, pl. paraméter.
 
 ## Ellenőrző kérdések
 

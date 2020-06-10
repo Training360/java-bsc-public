@@ -1,28 +1,20 @@
 package exceptions;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class TrainerReader {
 
     public static final String SEPARATOR = ";";
 
-    private String values;
-
-    public TrainerReader(String values) {
-        this.values = values;
-    }
-
     public List<Trainer> read() {
         List<Trainer> trainers = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new StringReader(values));
-        String line;
+        Scanner scanner = new Scanner(TrainerReader.class.getResourceAsStream("trainers.csv"));
+
         try {
-            while ((line = reader.readLine()) != null) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
                 Trainer trainer = parseLine(line);
                 trainers.add(trainer);
             }
@@ -33,22 +25,10 @@ public class TrainerReader {
         catch (IllegalArgumentException iae) {
             throw new IllegalStateException("Error by parsing, invalid line", iae);
         }
-        catch (IOException ioe) {
-            throw new IllegalStateException("Error by parsing, general io", ioe);
-        }
         finally {
-            closeReader(reader);
+            scanner.close();
         }
         return trainers;
-    }
-
-    private void closeReader(Reader reader) {
-        try {
-            reader.close();
-        }
-        catch (IOException ioe) {
-            throw new IllegalStateException("Cannot close", ioe);
-        }
     }
 
     private Trainer parseLine(String line) {
@@ -61,6 +41,5 @@ public class TrainerReader {
         }
         return new Trainer(fields[0], Integer.parseInt(fields[1]));
     }
-
 
 }
