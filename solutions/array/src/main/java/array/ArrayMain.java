@@ -3,7 +3,7 @@ package array;
 public class ArrayMain {
 
     public static void main(String[] args) {
-        String[] days = {"Monday", "Tuesday", "Wednesday", "Thirsday", "Friday", "Saturday", "Sunday"};
+        String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         System.out.println(days[1]);
         System.out.println(days.length);
@@ -19,7 +19,7 @@ public class ArrayMain {
         }
 
         System.out.println();
-        
+
         boolean[] bools = new boolean[6];
 
         for (int i = 1; i < bools.length; i++) {

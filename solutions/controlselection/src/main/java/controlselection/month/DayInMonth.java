@@ -26,7 +26,7 @@ public class DayInMonth {
                     return 28;
                 }
             default:
-                throw new IllegalArgumentException("Invalid month: " + month);
+                return 0;
         }
     }
 }

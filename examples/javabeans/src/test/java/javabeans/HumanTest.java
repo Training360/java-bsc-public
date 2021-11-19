@@ -1,36 +1,35 @@
 package javabeans;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HumanTest {
+class HumanTest {
 
     @Test
-    public void getSetName() {
+    void getSetName() {
         final String name = "Kovács Anna";
         Human human = new Human();
         human.setName(name);
 
-        assertThat(human.getName(), is(name));
+        assertEquals(name, human.getName());
     }
 
     @Test
-    public void getSetWeight() {
+    void getSetWeight() {
         final double weight = 62.3;
         Human human = new Human();
         human.setWeight(weight);
 
-        assertThat(human.getWeight(), is(weight));
+        assertEquals(weight, human.getWeight());
     }
 
     @Test
-    public void getSetIQ() {
+    void getSetIQ() {
         final int iq = 123;
         Human human = new Human();
         human.setIq(iq);
 
-        assertThat(human.getIq(), is(iq));
+        assertEquals(iq, human.getIq());
     }
 }

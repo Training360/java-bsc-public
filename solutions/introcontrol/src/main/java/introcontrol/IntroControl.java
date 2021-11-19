@@ -2,59 +2,11 @@ package introcontrol;
 
 public class IntroControl {
 
-    public static void main(String[] args) {
-        IntroControl introControl = new IntroControl();
-        System.out.println(introControl.subtractTenIfGreaterThanTen(0));
-        System.out.println(introControl.subtractTenIfGreaterThanTen(10));
-        System.out.println(introControl.subtractTenIfGreaterThanTen(15));
-
-        System.out.println(introControl.describeNumber(0));
-        System.out.println(introControl.describeNumber(1));
-
-        System.out.println(introControl.greetingToJoe("Joe"));
-        System.out.println(introControl.greetingToJoe("Jane"));
-
-        System.out.println("calculateBonus");
-        System.out.println(introControl.calculateBonus(0));
-        System.out.println(introControl.calculateBonus(100));
-        System.out.println(introControl.calculateBonus(1_000_000));
-        System.out.println(introControl.calculateBonus(1_000_090));
-
-        System.out.println("calculateMeterReadingsDifference");
-        System.out.println(introControl.calculateConsumption(10, 20));
-        System.out.println(introControl.calculateConsumption(9990, 10));
-
-        System.out.println("printNumbers");
-        introControl.printNumbers(10);
-        System.out.println("printNumbersBetween");
-        introControl.printNumbersBetween(10, 20);
-
-        System.out.println("printNumbersBetweenAnyDirection");
-        introControl.printNumbersBetweenAnyDirection(10, 20);
-        System.out.println("printNumbersBetweenAnyDirection - reverse");
-        introControl.printNumbersBetweenAnyDirection(20, 10);
-
-        System.out.println("printOddNumbers - 1");
-        introControl.printOddNumbers(1);
-        System.out.println("printOddNumbers - 10");
-        introControl.printOddNumbers(10);
-        System.out.println("printOddNumbers - 11");
-        introControl.printOddNumbers(11);
-    }
-
     public int subtractTenIfGreaterThanTen(int number) {
         if (number > 10) {
             return number - 10;
         } else {
             return number;
-        }
-    }
-
-    public String greetingToJoe(String name) {
-        if (name.equals("Joe")) {
-            return "Hello Joe";
-        } else {
-            return "";
         }
     }
 
@@ -66,6 +18,14 @@ public class IntroControl {
         }
     }
 
+    public String greetingToJoe(String name) {
+        if (name.equals("Joe")) {
+            return "Hello Joe";
+        } else {
+            return "";
+        }
+    }
+
     public int calculateBonus(int sale) {
         if (sale >= 1_000_000) {
             return sale / 10;
@@ -74,6 +34,13 @@ public class IntroControl {
         }
     }
 
+    public int calculateConsumption(int prev, int next) {
+        if (prev <= next) {
+            return next - prev;
+        } else {
+            return 10_000 - prev + next;
+        }
+    }
 
     public void printNumbers(int max) {
         for (int i = 0; i <= max; i++) {
@@ -104,14 +71,5 @@ public class IntroControl {
             System.out.println(i);
         }
     }
-
-    public int calculateConsumption(int prev, int next) {
-        if (prev <= next) {
-            return next - prev;
-        } else {
-            return 10_000 - prev + next;
-        }
-    }
-
 }
 

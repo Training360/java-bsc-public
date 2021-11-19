@@ -21,10 +21,8 @@ public class Registration {
 
         UserValidator userValidator = new UserValidator();
 
-        String message = userValidator.isValidUsername(username) ? "" : "Invalid felhasználónév\n";
-        message += userValidator.isValidPassword(password, password2) ? "" : "Invalid vagy nem egyező jelszó\n";
-        message += userValidator.isValidEmail(email) ? "" : "Invalid email cím";
-
-        System.out.println(message.length() > 0 ? message : "Sikeres regisztráció");
+        System.out.println(userValidator.isValidUsername(username) ? "felhasználónév rendben" : "felhasználónév helytelen");
+        System.out.println(userValidator.isValidPassword(password, password2) ? "jelszó rendben" : "jelszó helytelen");
+        System.out.println(userValidator.isValidEmail(email) ? "e-mail rendben" : "e-mail helytelen");
     }
 }

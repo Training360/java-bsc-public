@@ -1,44 +1,44 @@
 package javabeans;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DogTest {
+class DogTest {
 
     @Test
-    public void getSetName() {
+    void getSetName() {
         final String name = "Bodri";
         Dog dog = new Dog();
         dog.setName(name);
 
-        assertThat(dog.getName(), is(name));
+        assertEquals(name, dog.getName());
     }
 
     @Test
-    public void isSetPedigree() {
+    void isSetPedigree() {
         Dog dog = new Dog();
         dog.setPedigree(true);
 
-        assertThat(dog.isPedigree(), is(true));
+        assertTrue(dog.isPedigree());
     }
 
     @Test
-    public void getSetAge() {
+    void getSetAge() {
         final int age = 3;
         Dog dog = new Dog();
         dog.setAge(age);
 
-        assertThat(dog.getAge(), is(age));
+        assertEquals(age, dog.getAge());
     }
 
     @Test
-    public void getSetWeight() {
+    void getSetWeight() {
         final double weight = 6.5;
         Dog dog = new Dog();
         dog.setWeight(weight);
 
-        assertThat(dog.getWeight(), is(weight));
+        assertEquals(weight, dog.getWeight());
     }
 }

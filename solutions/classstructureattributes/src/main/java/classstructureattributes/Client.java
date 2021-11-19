@@ -7,5 +7,4 @@ public class Client {
     int year;
 
     String address;
-
 }

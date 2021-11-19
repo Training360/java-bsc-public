@@ -26,7 +26,7 @@ public class Bank {
     private Account get(String accountNumber) throws InvalidAccountNumberBankOperationException {
         int accountIndex = -1;
         for (int i = 0; i < this.accounts.size(); i++) {
-            if (this.accounts.get(i).getAccountNumber().equals(accountNumber)) {
+            if (accounts.get(i).getAccountNumber().equals(accountNumber)) {
                 accountIndex = i;
             }
         }

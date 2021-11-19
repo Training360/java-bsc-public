@@ -12,12 +12,10 @@ public class Music {
         song.band = scanner.nextLine();
         System.out.println("Mi a dal címe?");
         song.title = scanner.nextLine();
-        System.out.println("Hány másodperc a hossza?");
+        System.out.println("Hány perc a hossza?");
         song.length = scanner.nextInt();
+        scanner.nextLine();
 
-        int minutes = song.length / 60;
-        int seconds = song.length - minutes * 60;
-
-        System.out.println(song.band + " - " + song.title + " " + minutes + ":" + seconds);
+        System.out.println(song.band + " - " + song.title + " (" + song.length + "perc)");
     }
 }

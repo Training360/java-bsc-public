@@ -1,16 +1,15 @@
 package methodstructure.pendrives;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PendrivesTest {
+class PendrivesTest {
 
-    private static final List<Pendrive> PENDRIVE_LIST = Arrays.asList(
+    static final List<Pendrive> PENDRIVE_LIST = Arrays.asList(
             new Pendrive("p1", 64, 3500),
             new Pendrive("p2", 32, 2000),
             new Pendrive("p3", 64, 3000),
@@ -18,27 +17,26 @@ public class PendrivesTest {
     );
 
     @Test
-    public void best() {
+    void testGetBest() {
         Pendrives pendrives = new Pendrives();
 
-        assertThat(pendrives.best(PENDRIVE_LIST), equalTo(PENDRIVE_LIST.get(2)));
+        assertEquals(PENDRIVE_LIST.get(2), pendrives.getBest(PENDRIVE_LIST));
     }
 
     @Test
-    public void cheapest() {
+    void testGetCheapest() {
         Pendrives pendrives = new Pendrives();
 
-        assertThat(pendrives.cheapest(PENDRIVE_LIST), equalTo(PENDRIVE_LIST.get(1)));
+        assertEquals(PENDRIVE_LIST.get(1), pendrives.getCheapest(PENDRIVE_LIST));
     }
 
     @Test
-    public void risePriceWhereCapacity() {
+    void risePriceWhereCapacity() {
         Pendrives pendrives = new Pendrives();
 
-        int[] expected = {3500, 2200, 3000, 2750};
         pendrives.risePriceWhereCapacity(PENDRIVE_LIST, 10, 32);
-        for (int j = 0; j < PENDRIVE_LIST.size(); j++) {
-            assertThat(PENDRIVE_LIST.get(j).getPrice(), equalTo(expected[j]));
-        }
+
+        assertEquals(3500, PENDRIVE_LIST.get(0).getPrice());
+        assertEquals(2200, PENDRIVE_LIST.get(1).getPrice());
     }
 }

@@ -33,12 +33,10 @@ public class UrlManager {
     }
 
     public boolean hasProperty(String key) {
-        validateString(key);
         return query.startsWith(key + "=") || query.contains("&" + key + "=");
     }
 
     public String getProperty(String key) {
-        validateString(key);
         String[] properties = query.split("&");
         for (String str : properties) {
             String[] prop = str.split("=");
@@ -51,9 +49,6 @@ public class UrlManager {
 
     private String getProtocolFromUrl(String url) {
         int endIndex = url.indexOf("://");
-        if (endIndex == -1 || url.substring(0, endIndex).isEmpty()) {
-            throw new IllegalArgumentException("Invalid url");
-        }
         return url.substring(0, endIndex).toLowerCase();
     }
 
@@ -68,9 +63,6 @@ public class UrlManager {
             host = url.substring(startIndex).toLowerCase();
         } else {
             host = url.substring(startIndex, endIndex).toLowerCase();
-        }
-        if (host.isEmpty()) {
-            throw new IllegalArgumentException("Invalid url");
         }
         return host;
     }
@@ -109,9 +101,39 @@ public class UrlManager {
         return url.substring(startIndex + 1);
     }
 
-    private void validateString(String str) {
-        if (str == null || str.isBlank()) {
-            throw new IllegalArgumentException("Parameter must not be empty");
-        }
+    public static void main(String[] args) {
+        String url = "HTTPS://EarthQuake.USgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+        UrlManager urlManager = new UrlManager(url);
+
+        System.out.println(urlManager.getProtocol());
+        System.out.println(urlManager.getHost());
+        System.out.println(urlManager.getPath());
+        System.out.println(urlManager.getPort());
+
+        String urlWithPortAtEnd = "HTTPS://EarthQuake.USgs.gov:80";
+        urlManager = new UrlManager(urlWithPortAtEnd);
+
+        System.out.println(urlManager.getProtocol());
+        System.out.println(urlManager.getHost());
+        System.out.println(urlManager.getPath());
+        System.out.println(urlManager.getPort());
+
+        String urlWithPort = "HTTPS://EarthQuake.USgs.gov:80/query?a=4";
+        urlManager = new UrlManager(urlWithPort);
+
+        System.out.println(urlManager.getProtocol());
+        System.out.println(urlManager.getHost());
+        System.out.println(urlManager.getPath());
+        System.out.println(urlManager.getPort());
+
+        String urlWithProperty = "HTTPS://EarthQuake.USgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+        urlManager = new UrlManager(urlWithProperty);
+
+        System.out.println(urlManager.hasProperty("format"));
+        System.out.println(urlManager.getProperty("format"));
+        System.out.println(urlManager.hasProperty("place"));
+        System.out.println(urlManager.getProperty("place"));
+        System.out.println(urlManager.hasProperty("time"));
+        System.out.println(urlManager.getProperty("time"));
     }
 }

@@ -1,54 +1,52 @@
 package methodstructure.bmi;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class BodyMassTest {
+class BodyMassTest {
 
-    private static final double SAMPLE_MASS = 70;
-    private static final double SAMPLE_HEIGHT = 1.7;
-    private static final double SAMPLE_MASS_UNDER = 60;
-    private static final double SAMPLE_HEIGHT_UNDER = 1.9;
-    private static final double SAMPLE_MASS_OVER = 90;
-    private static final double SAMPLE_HEIGHT_OVER = 1.6;
+    static final double SAMPLE_MASS = 70;
+    static final double SAMPLE_HEIGHT = 1.7;
+    static final double SAMPLE_MASS_UNDER = 60;
+    static final double SAMPLE_HEIGHT_UNDER = 1.9;
+    static final double SAMPLE_MASS_OVER = 90;
+    static final double SAMPLE_HEIGHT_OVER = 1.6;
 
     @Test
-    public void constructorShouldInitialize() {
+    void testCreate() {
         BodyMass bm = new BodyMass(SAMPLE_MASS, SAMPLE_HEIGHT);
 
-        assertThat(bm.getWeight(), equalTo(SAMPLE_MASS));
-        assertThat(bm.getHeight(), equalTo(SAMPLE_HEIGHT));
+        assertEquals(SAMPLE_MASS, bm.getWeight());
+        assertEquals(SAMPLE_HEIGHT, bm.getHeight());
     }
 
     @Test
-    public void bodyMassIndex() {
+    void testGetBodyMassIndex() {
         BodyMass bm = new BodyMass(SAMPLE_MASS, SAMPLE_HEIGHT);
 
         double expectedBmi = SAMPLE_MASS / (SAMPLE_HEIGHT * SAMPLE_HEIGHT);
-        assertThat(bm.bodyMassIndex(), equalTo(expectedBmi));
+        assertEquals(expectedBmi, bm.getBodyMassIndex());
     }
 
     @Test
-    public void body() {
+    void testGetBody() {
         BodyMass bm = new BodyMass(SAMPLE_MASS, SAMPLE_HEIGHT);
         BodyMass bmUnder = new BodyMass(SAMPLE_MASS_UNDER, SAMPLE_HEIGHT_UNDER);
         BodyMass bmOver = new BodyMass(SAMPLE_MASS_OVER, SAMPLE_HEIGHT_OVER);
 
-        assertThat(bm.body(), equalTo(BmiCategory.NORMAL));
-        assertThat(bmUnder.body(), equalTo(BmiCategory.UNDERWEIGHT));
-        assertThat(bmOver.body(), equalTo(BmiCategory.OVERWEIGHT));
+        assertEquals(BmiCategory.NORMAL, bm.getBody());
+        assertEquals(BmiCategory.UNDERWEIGHT, bmUnder.getBody());
+        assertEquals(BmiCategory.OVERWEIGHT, bmOver.getBody());
     }
 
     @Test
-    public void isThinnerThan() {
+    void testIsThinnerThan() {
         BodyMass bm = new BodyMass(SAMPLE_MASS, SAMPLE_HEIGHT);
         BodyMass bmUnder = new BodyMass(SAMPLE_MASS_UNDER, SAMPLE_HEIGHT_UNDER);
 
-        assertThat(bm.isThinnerThan(bmUnder), is(false));
-        assertThat(bmUnder.isThinnerThan(bm), is(true));
-        assertThat(bm.isThinnerThan(bm), is(false));
+        assertFalse(bm.isThinnerThan(bmUnder));
+        assertTrue(bmUnder.isThinnerThan(bm));
+        assertFalse(bm.isThinnerThan(bm));
     }
 }

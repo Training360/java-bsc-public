@@ -2,38 +2,38 @@ package introdate;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Month;
 
 public class Performance {
 
+    private String artist;
     private LocalDate date;
-    private String type;
-    private LocalTime time;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
-    public Performance(int year, Month month, int day, String type, int hour, int minute) {
-        this.date = LocalDate.of(year, month, day);
-        this.type = type;
-        this.time = LocalTime.of(hour, minute);
+    public Performance(String artist, LocalDate date, LocalTime startTime, LocalTime endTime) {
+        this.artist = artist;
+        this.date = date;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public String getInfo() {
+        return artist + ": " + date + " " + startTime + " - " + endTime;
+    }
+
+    public String getArtist() {
+        return artist;
     }
 
     public LocalDate getDate() {
         return date;
     }
 
-    public String getType() {
-        return type;
+    public LocalTime getStartTime() {
+        return startTime;
     }
 
-    public LocalTime getTime() {
-        return time;
-    }
-
-    @Override
-    public String toString() {
-        return "Performance{" +
-                "date=" + date +
-                ", type='" + type + '\'' +
-                ", time=" + time +
-                '}';
+    public LocalTime getEndTime() {
+        return endTime;
     }
 }

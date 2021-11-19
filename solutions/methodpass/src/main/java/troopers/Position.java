@@ -22,6 +22,6 @@ public class Position {
         if (position == null) {
             throw new IllegalArgumentException("Cannot calculate distance from unknown position");
         }
-        return Math.sqrt(Math.pow(this.posX - position.posX, 2) + Math.pow(this.posY - position.posY, 2));
+        return Math.sqrt(Math.pow(posX - position.posX, 2) + Math.pow(posY - position.posY, 2));
     }
 }

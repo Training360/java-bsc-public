@@ -12,9 +12,9 @@ public class TaskMain {
         task.setDuration(100);
 
         System.out.println("Started at "
-            + task.getStartDateTime()
-            + " and took "
-            + task.getDuration()
-            + " minutes to finish.");
+                + task.getStartDateTime()
+                + " and took "
+                + task.getDuration()
+                + " minutes to finish.");
     }
 }

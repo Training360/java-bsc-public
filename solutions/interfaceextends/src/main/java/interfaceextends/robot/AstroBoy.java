@@ -26,7 +26,7 @@ public class AstroBoy implements FlyableRobot{
 
 	@Override
 	public void liftTo(long altitude) {
-		Point newPosition = new Point(this.position.getX(), this.position.getY(), altitude);
+		Point newPosition = new Point(position.getX(), position.getY(), altitude);
 		path.add(newPosition);
 		this.position = newPosition;
 	}

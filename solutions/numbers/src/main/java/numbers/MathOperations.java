@@ -11,7 +11,7 @@ public class MathOperations {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Mi az eredmény? Négy tizedes jegy pontossággal add meg!");
+        System.out.println("Mi az eredmény? Négy tizedesjegy pontossággal add meg!");
         System.out.println(problem);
 
         double resultByUser = scanner.nextDouble();

@@ -1,33 +1,26 @@
 package controlselection.week;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DayOfWeeksTest {
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
+class DayOfWeeksTest {
 
     @Test
-    public void testWhichDay() {
-        assertThat(new DayOfWeeks().whichDay("hétfő"), equalTo("hét eleje"));
-        assertThat(new DayOfWeeks().whichDay("szerda"), equalTo("hét közepe"));
-        assertThat(new DayOfWeeks().whichDay("péntek"), equalTo("majdnem hétvége"));
-        assertThat(new DayOfWeeks().whichDay("vasárnap"), equalTo("hét vége"));
+    void testWhichDay() {
+        assertEquals("hét eleje", new DayOfWeeks().whichDay("hétfő"));
+        assertEquals("hét közepe", new DayOfWeeks().whichDay("szerda"));
+        assertEquals("majdnem hétvége", new DayOfWeeks().whichDay("péntek"));
+        assertEquals("hét vége", new DayOfWeeks().whichDay("vasárnap"));
     }
 
     @Test
-    public void testCase() {
-        assertThat(new DayOfWeeks().whichDay("hÉtfŐ"), equalTo("hét eleje"));
+    void testCase() {
+        assertEquals("hét eleje", new DayOfWeeks().whichDay("hÉtfŐ"));
     }
 
     @Test
-    public void testIllegalDay() {
-        expectedException.expect(IllegalArgumentException.class);
-        new DayOfWeeks().whichDay("abc");
+    void testIllegalDay() {
+        assertEquals("ismeretlen nap", new DayOfWeeks().whichDay("abc"));
     }
 }

@@ -15,10 +15,12 @@ public class Salesperson {
     public int getAmount() {
         return amount;
     }
+
     public int getTarget() {
         return target;
     }
-    public int getDifferenceFromTarget(){
-        return  amount - target;
+
+    public int getDifferenceFromTarget() {
+        return amount - target;
     }
 }

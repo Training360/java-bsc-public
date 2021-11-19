@@ -16,7 +16,7 @@ public class DayOfWeeks {
             case "vasárnap":
                 return "hét vége";
             default:
-                throw new IllegalArgumentException("Invalid day: " + day);
+                return "ismeretlen nap";
         }
     }
 }

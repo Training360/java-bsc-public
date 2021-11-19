@@ -32,7 +32,7 @@ public class Robot {
 	}
 
 	public Robot registerNavigationPoint() {
-		this.navigationList.add(new NavigationPoint(this.distance, this.azimut));
+		this.navigationList.add(new NavigationPoint(distance, azimut));
 		return this;
 	}
 }

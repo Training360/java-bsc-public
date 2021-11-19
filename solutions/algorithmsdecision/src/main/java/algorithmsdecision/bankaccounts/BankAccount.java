@@ -15,6 +15,7 @@ public class BankAccount {
     public int getBalance() {
         return balance;
     }
+
     public String getAccountNumber() {
         return accountNumber;
     }

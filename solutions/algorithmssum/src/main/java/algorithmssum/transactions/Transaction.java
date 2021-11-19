@@ -1,6 +1,5 @@
 package algorithmssum.transactions;
 
-
 public class Transaction {
 
     private String accountNumber;
@@ -18,6 +17,14 @@ public class Transaction {
     }
     public boolean isDebit() {
         return transactionOperation == TransactionOperation.DEBIT;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public TransactionOperation getTransactionOperation() {
+        return transactionOperation;
     }
 
     public int getAmount() {

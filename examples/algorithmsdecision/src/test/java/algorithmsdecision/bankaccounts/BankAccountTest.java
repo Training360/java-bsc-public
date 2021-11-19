@@ -1,35 +1,36 @@
 package algorithmsdecision.bankaccounts;
 
-import static org.hamcrest.CoreMatchers.is;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class BankAccountTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class BankAccountTest {
 
     BankAccount bankAccount = new BankAccount("Fred", "123-324-123", 100);
 
     @Test
-    public void testCreateBankAccount() {
+    void testCreateBankAccount() {
 
-        assertThat(bankAccount.getAccountNumber(), is("123-324-123"));
-        assertThat(bankAccount.getBalance(), is(100));
+        assertEquals("123-324-123", bankAccount.getAccountNumber());
+        assertEquals(100, bankAccount.getBalance());
 
     }
 
     @Test
-    public void testWithdraw() {
+    void testWithdraw() {
         bankAccount.withdraw(50);
-        assertThat(bankAccount.getBalance(),is(50));
-        assertThat(bankAccount.withdraw(110),is(false));
-        assertThat(bankAccount.withdraw(20),is(true));
-    }
-    
-    @Test
-    public void testDeposit(){
-        bankAccount.deposit(100);
-        assertThat(bankAccount.getBalance(),is(200));
-        assertThat(bankAccount.deposit(20),is(true));
-        
+        assertEquals(50, bankAccount.getBalance());
+        assertFalse(bankAccount.withdraw(110));
+        assertTrue(bankAccount.withdraw(20));
     }
 
+    @Test
+    void testDeposit() {
+        bankAccount.deposit(100);
+        assertEquals(200, bankAccount.getBalance());
+        assertTrue(bankAccount.deposit(20));
+
+    }
 }

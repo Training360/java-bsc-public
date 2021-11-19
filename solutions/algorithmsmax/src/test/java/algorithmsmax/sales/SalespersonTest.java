@@ -1,18 +1,17 @@
 package algorithmsmax.sales;
 
-import static org.hamcrest.CoreMatchers.is;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class SalespersonTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SalespersonTest {
 
     @Test
-    public void testCreateIsOk() {
+    void testCreateIsOk() {
         Salesperson person = new Salesperson("Somebody", 1000, 200);
 
-        assertThat(person.getAmount(), is(1000));
-        assertThat(person.getTarget(), is(200));
-        assertThat(person.getDifferenceFromTarget(), is(800));
+        assertEquals(1000, person.getAmount());
+        assertEquals(200, person.getTarget());
+        assertEquals(800, person.getDifferenceFromTarget());
     }
-
 }

@@ -1,38 +1,41 @@
 package controlselection.month;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DayInMonthTest {
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
+class DayInMonthTest {
 
     @Test
-    public void testNumberOfDays() {
-        assertThat(new DayInMonth().numberOfDays(2017, "május"), equalTo(31));
-        assertThat(new DayInMonth().numberOfDays(2017, "június"), equalTo(30));
-        assertThat(new DayInMonth().numberOfDays(2017, "február"), equalTo(28));
-        assertThat(new DayInMonth().numberOfDays(1900,"február"),equalTo(28));
+    void testNumberOfDays() {
+        assertEquals(31, new DayInMonth().numberOfDays(2017, "május"));
+        assertEquals(30, new DayInMonth().numberOfDays(2017, "június"));
+        assertEquals(28, new DayInMonth().numberOfDays(2017, "február"));
+        assertEquals(28, new DayInMonth().numberOfDays(1900, "február"));
     }
 
     @Test
-    public void testCase() {
-        assertThat(new DayInMonth().numberOfDays(2017, "MáJuS"), equalTo(31));
+    void testCase() {
+        assertEquals(31, new DayInMonth().numberOfDays(2017, "MáJuS"));
     }
 
     @Test
-    public void testLeapYear() {
-        assertThat(new DayInMonth().numberOfDays(2012, "február"), equalTo(29));
+    void testLeapYear() {
+        assertEquals(29, new DayInMonth().numberOfDays(2012, "február"));
     }
 
     @Test
-    public void testIllegalMonth() {
-        expectedException.expect(IllegalArgumentException.class);
-        new DayInMonth().numberOfDays(2012, "abc");
+    void testLeapYear100() {
+        assertEquals(28, new DayInMonth().numberOfDays(1900, "február"));
+    }
+
+    @Test
+    void testLeapYear400() {
+        assertEquals(29, new DayInMonth().numberOfDays(2000, "február"));
+    }
+
+    @Test
+    void testIllegalMonth() {
+        assertEquals(0, new DayInMonth().numberOfDays(2012, "abc"));
     }
 }

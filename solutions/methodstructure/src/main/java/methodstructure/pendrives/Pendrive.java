@@ -38,22 +38,22 @@ public class Pendrive {
     }
 
     public int comparePricePerCapacity(Pendrive other) {
-        double ppc = pricePerCapacity();
-        double otherPpc = other.pricePerCapacity();
+        double ppc = getPricePerCapacity();
+        double otherPpc = other.getPricePerCapacity();
         if (ppc > otherPpc) {
             return 1;
         }
         if (ppc < otherPpc) {
             return -1;
         }
-        return  0;
+        return 0;
     }
 
-    public boolean cheaperThan(Pendrive other) {
+    public boolean isCheaperThan(Pendrive other) {
         return this.price < other.price;
     }
 
-    private double pricePerCapacity() {
-        return (double)price/capacity;
+    private double getPricePerCapacity() {
+        return (double) price / capacity;
     }
 }

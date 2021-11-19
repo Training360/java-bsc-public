@@ -1,48 +1,46 @@
 package methodstructure.pendrives;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class PendriveTest {
+class PendriveTest {
 
     @Test
-    public void constructorShouldInitialize() {
-        Pendrive pendrive = new Pendrive("Datatraveller", 32, 5000);
+    void testCreate() {
+        Pendrive pendrive = new Pendrive("DataTraveler", 32, 5000);
 
-        assertThat(pendrive.getName(), equalTo("Datatraveller"));
-        assertThat(pendrive.getCapacity(), equalTo(32));
-        assertThat(pendrive.getPrice(), equalTo(5000));
+        assertEquals("DataTraveler", pendrive.getName());
+        assertEquals(32, pendrive.getCapacity());
+        assertEquals(5000, pendrive.getPrice());
     }
 
     @Test
-    public void risePrice() {
-        Pendrive pendrive = new Pendrive("Datatraveller", 32, 5000);
+    void testRisePrice() {
+        Pendrive pendrive = new Pendrive("DataTraveler", 32, 5000);
 
         pendrive.risePrice(10);
-        assertThat(pendrive.getPrice(), equalTo(5500));
+        assertEquals(5500, pendrive.getPrice());
     }
 
     @Test
-    public void comparePricePerCapacity() {
-        Pendrive pendrive = new Pendrive("Datatraveller", 32, 5000);
+    void testComparePricePerCapacity() {
+        Pendrive pendrive = new Pendrive("DataTraveler", 32, 5000);
         Pendrive pendrive2 = new Pendrive("Kingston", 64, 7000);
-        Pendrive pendrive3 = new Pendrive("Datatraveller", 32, 5001);
+        Pendrive pendrive3 = new Pendrive("DataTraveler", 32, 5001);
 
-        assertThat(pendrive.comparePricePerCapacity(pendrive2), equalTo(1));
-        assertThat(pendrive2.comparePricePerCapacity(pendrive), equalTo(-1));
-        assertThat(pendrive.comparePricePerCapacity(pendrive), equalTo(0));
-        assertThat(pendrive.comparePricePerCapacity(pendrive3), equalTo(-1));
+        assertEquals(1, pendrive.comparePricePerCapacity(pendrive2));
+        assertEquals(-1, pendrive2.comparePricePerCapacity(pendrive));
+        assertEquals(0, pendrive.comparePricePerCapacity(pendrive));
+        assertEquals(-1, pendrive.comparePricePerCapacity(pendrive3));
     }
 
     @Test
-    public void cheaperThan() {
-        Pendrive pendrive = new Pendrive("Datatraveller", 32, 5000);
+    void testIsCheaperThan() {
+        Pendrive pendrive = new Pendrive("DataTraveler", 32, 5000);
         Pendrive pendrive2 = new Pendrive("Kingston", 64, 7000);
 
-        assertThat(pendrive.cheaperThan(pendrive2), is(true));
-        assertThat(pendrive2.cheaperThan(pendrive), is(false));
+        assertTrue(pendrive.isCheaperThan(pendrive2));
+        assertFalse(pendrive2.isCheaperThan(pendrive));
     }
 }

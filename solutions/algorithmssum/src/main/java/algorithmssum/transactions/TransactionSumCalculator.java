@@ -2,7 +2,6 @@ package algorithmssum.transactions;
 
 import java.util.List;
 
-
 public class TransactionSumCalculator {
 
     public int sumAmountOfCreditEntries(List<Transaction> transactions) {

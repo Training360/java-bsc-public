@@ -1,25 +1,20 @@
 package attributes.bill;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Bill {
 
-    private List<Item> items = new ArrayList<>();
+    public static void main(String[] args) {
 
-    public void addItem(Item item) {
-        items.add(item);
-    }
+        BillItem milk = new BillItem("milk", 270, 3, 18.0);
+        BillItem bread = new BillItem("bread", 400, 1, 18.0);
+        BillItem cocoa = new BillItem("cocoa", 950, 2, 27.0);
 
-    public List<Item> getItems() {
-        return items;
-    }
+        System.out.println(milk.getProduct());
+        System.out.println(milk.getPrice());
+        System.out.println(bread.getQuantity());
+        System.out.println(cocoa.getVatPercent());
 
-    public double calculateTotalPrice() {
-        double sum = 0;
-        for (Item item: items) {
-            sum += item.getQuantity() * item.getPrice();
-        }
-        return sum;
+        double totalPrice = milk.calculateTotalPrice() + bread.calculateTotalPrice() + cocoa.calculateTotalPrice();
+
+        System.out.println(totalPrice);
     }
 }

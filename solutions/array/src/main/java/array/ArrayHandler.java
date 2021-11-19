@@ -2,35 +2,44 @@ package array;
 
 public class ArrayHandler {
 
-    public boolean contains(int[] source, int itemToFind) {
-        for (int item : source) {
-            if (item == itemToFind) {
-                return true;
-            }
+    public void addIndexToNumber(int[] source) {
+        for (int i = 0; i < source.length; i++) {
+            source[i] += i;
         }
-        return false;
     }
 
-    public int find(int[] source, int itemToFind) {
+    public void concatenateIndexToWord(String[] source) {
         for (int i = 0; i < source.length; i++) {
-            if (source[i] == itemToFind) {
-                return i;
-            }
+            source[i] = i + ". "  + source[i];
         }
-        return -1;
     }
 
     public static void main(String[] args) {
         ArrayHandler arrayHandler = new ArrayHandler();
 
-        final int[] testArray = new int[]{1, 3, 5, 10};
+        int[] numbers = new int[]{1, 3, 5, 10};
+        String[] words = new String[]{"egy", "kettő", "három"};
 
-        System.out.println("contains");
-        System.out.println(arrayHandler.contains(testArray, 8));
-        System.out.println(arrayHandler.contains(testArray, 5));
+        arrayHandler.addIndexToNumber(numbers);
 
-        System.out.println("find");
-        System.out.println(arrayHandler.find(testArray, 8));
-        System.out.println(arrayHandler.find(testArray, 5));
+        for (int i : numbers) {
+            System.out.println(i);
+        }
+
+        for (int i : numbers) {
+            System.out.print(i + ", ");
+        }
+
+        System.out.println();
+
+        arrayHandler.concatenateIndexToWord(words);
+
+        for (String s : words) {
+            System.out.println(s);
+        }
+
+        for (String s : words) {
+            System.out.print(s + ", ");
+        }
     }
 }

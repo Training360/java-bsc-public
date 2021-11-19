@@ -1,99 +1,192 @@
 # JAVA-BSC - Java SE alapok
 
-## Javasolt haladás
+## Tematika
 
-* Először nézd meg a videót! A videóban szereplő forráskódot a [demos](demos) könyvtárban találod.
-* Dolgozd fel a videóhoz tartozó írott anyagot, amelynek itt találod a tartalomjegyzékét, és a következő részekből áll:
-	* Olvasd el a megfelelő elméleti részt, értelmezd!
-	* Próbálj válaszolni az ellenőrző kérdésekre!
-	* Old meg a gyakorlati feladatot, melynek itt találod a feladatleírását. Dolgozhatsz ugyanabba a projektbe. 
-	  Minden leckéhez hozz létre külön csomagot! Figyelj, hogy a _Unit tesztelés JUnittal_ lecke után vannak tesztesetek, ezeket másold be a projektedbe!
-		Ezek az [examples](examples) könyvtárban vannak.
-		* Ellenőrizd a gyakorlati feladat megoldását. Ezek a [solutions](solutions) könyvtárban vannak.
+### Bevezetés a nyelvi eszközökbe
 
-## Tartalomjegyzék
+Eszközkészlet
 
-* [background - Java történeti háttér](examples/background/README.md)
-* [introjdk - Java platform](examples/introjdk/README.md)
-* [intromaven - Maven](examples/intromaven/README.md)
-* [introide - IDE](examples/introide/README.md)
-* [distjar - JAR állomány](examples/distjar/README.md)
-* [introgit - Git használata az IDE-ben](examples/introgit/README.md)
-* [classstructureio - Kiírás és beolvasás konzolról](examples/classstructureio/README.md)
-* [classstructureattributes - Objektumok és attribútumok](examples/classstructureattributes/README.md)
-* [classstructuremethods - Metódusok](examples/classstructuremethods/README.md)
-* [classstructureconstructors - Konstruktorok](examples/classstructureconstructors/README.md)
-* [classstructureintegrate - UML, példányok konzol íráskor/olvasáskor](examples/classstructureintegrate/README.md)
-* [conventions - Kódolási konvenciók](examples/conventions/README.md)
-* [localvariables - Literálok és lokális változók](examples/localvariables/README.md)
-* [statements - Kifejezések és utasítások](examples/statements/README.md)
-* [packages - Csomagok](examples/packages/README.md)
-* [javaapi - Java API](examples/javaapi/README.md)
-* [stringtype - Szöveges típus](examples/stringtype/README.md)
-* [introdate - Dátum és időkezelés alapok](examples/introdate/README.md)
-* [introcontrol - Bevezetés a vezérlési szerkezetekbe](examples/introcontrol/README.md)
-* [array - Tömbök](examples/array/README.md)
-* [arrayofarrays - Tömbök tömbje](examples/arrayofarrays/README.md)
-* [arrays - Tömbök kezelése](examples/arrays/README.md)
-* [arraylist - Lista](examples/arraylist/README.md)
-* [debug - Debug](examples/debug/README.md)
-* [finalmodifier - Konstans értékek használata](examples/finalmodifier/README.md)
-* [math - Math és Random osztály](examples/math/README.md)
-* [objects - Objektumok](examples/objects/README.md)
-* [attributes - Bevezetés az attribútumok használatába](examples/attributes/README.md)
-* [introconstructors - Bevezetés a konstruktorok használatába](examples/introconstructors/README.md)
-* [intromethods - Bevezetés a metódusok használatába](examples/intromethods/README.md)
-* [references - Referenciák](examples/references/README.md)
-* [literals - Literálok](examples/literals/README.md)
-* [primitivetypes - Egyszerű típusok](examples/primitivetypes/README.md)
-* [enumtype - Felsorolásos típus](examples/enumtype/README.md)
-* [operators - Operátorok](examples/operators/README.md)
-* [typeconversion - Típuskonverzió](examples/typeconversion/README.md)
-* [numbers - Egész és lebegőpontos számok](examples/numbers/README.md)
-* [introjunit - Unit tesztelés JUnittal](examples/introjunit/README.md)
-* [controlselection - Vezérlési szerkezetek és az elágazás](examples/controlselection/README.md)
-* [controliteration - Ciklusok](examples/controliteration/README.md)
-* [controladvanced - Haladó vezérlési szerkezetek](examples/controladvanced/README.md)
-* [introexception - Bevezetés a kivételkezelésbe](examples/introexception/README.md)
-* [stringbasic - String alapok](examples/stringbasic/README.md)
-* [stringconcat - Konkatenáció](examples/stringconcat/README.md)
-* [stringmethods - Főbb String metódusok](examples/stringmethods/README.md)
-* [stringbuilder - StringBuilder](examples/stringbuilder/README.md)
-* [stringscanner - Scanner](examples/stringscanner/README.md)
-* [filescanner - Fájl olvasása Scannerrel](examples/filescanner/README.md)
-* [formatlocaleprintf - printf](examples/formatlocaleprintf/README.md)
-* [algorithmssum - Összegzés tétele](examples/algorithmssum/README.md)
-* [algorithmscount - Számlálás tétele](examples/algorithmscount/README.md)
-* [algorithmsmax - Szélsőérték keresés tétele](examples/algorithmsmax/README.md)
-* [algorithmsdecision - Eldöntés tétele](examples/algorithmsdecision/README.md)
-* [recursion - Rekurzió](examples/recursion/README.md)
-* [immutable - Immutable objektumok](examples/immutable/README.md)
-* [javabeans - JavaBeans objektumok](examples/javabeans/README.md)
-* [methodstructure - Metódusok](examples/methodstructure/README.md)
-* [methodpass - Értékmásolás szerinti paraméterátadás](examples/methodpass/README.md)
-* [methodparam - Metódus paraméterek](examples/methodparam/README.md)
-* [methodvarargs - Változó hosszúságú paraméterlista](examples/methodvarargs/README.md)
-* [methodchain - Metódus hívások láncolása](examples/methodchain/README.md)
-* [methoverloading - Metódusnév túlterhelés](examples/methoverloading/README.md)
-* [staticattrmeth - Statikus attribútumok és metódusok](examples/staticattrmeth/README.md)
-* [defaultconstructor - Default és paraméter nélküli konstruktor](examples/defaultconstructor/README.md)
-* [constructoroverloading - Konstruktor túlterhelés](examples/constructoroverloading/README.md)
-* [initializer - Inicializátorok](examples/initializer/README.md)
-* [introinheritance - Öröklődés](examples/introinheritance/README.md)
-* [inheritanceconstructor - Konstruktorok és az öröklődés viszonya](examples/inheritanceconstructor/README.md)
-* [objectclass - Object ősosztály](examples/objectclass/README.md)
-* [inheritanceattributes - Attribútumok öröklődése](examples/inheritanceattributes/README.md)
-* [inheritancemethods - Metódusok öröklődése](examples/inheritancemethods/README.md)
-* [abstractclass - Absztrakt osztályok](examples/abstractclass/README.md)
-* [interface - Interfészek](examples/interface/README.md)
-* [interfacedefaultmethods - Default interfész metódusok](examples/interfacedefaultmethods/README.md)
-* [interfacestaticmethods - Statikus interfész metódusok](examples/interfacestaticmethods/README.md)
-* [interfaceextends - Interfészek és az öröklődés viszonya](examples/interfaceextends/README.md)
-* [enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban](examples/enumabstract/README.md)
-* [statemachine - Állapotgép](examples/statemachine/README.md)
-* [polymorphism - Polimorfizmus](examples/polymorphism/README.md)
-* [virtualmethod - Dinamikus kötés](examples/virtualmethod/README.md)
-* [isahasa - is-a has-a kapcsolatok](examples/isahasa/README.md)
-* [exceptions - Kivételkezelés](examples/exceptions/README.md)
-* [exceptionclass - Saját kivétel](examples/exceptionclass/README.md)
-* [exceptionmulticatch - Multi catch](examples/exceptionmulticatch/README.md)
+* background - Java történeti háttér
+* installjdk - Oracle JDK telepítése
+* introjdk - Java platform
+* intromaven - Maven
+* introide - IDE
+* introgit - Git használata az IDE-ben
+* introgithub - Feltöltés GitHubra
+
+Bevezetés a Java osztályok használatába
+
+* classstructureio - Kiírás és beolvasás konzolról
+* classstructureattributes - Objektumok és attribútumok
+* classstructuremethods - Metódusok
+* classstructureconstructors - Konstruktorok
+* classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
+
+A nyelv építőkövei
+
+* conventions - Kódolási konvenciók
+* localvariables - Literálok és lokális változók
+* statements - Kifejezések és utasítások
+* packages - Csomagok
+* javaapi - Java API
+* distjar - JAR állomány
+* stringtype - Szöveges típus
+* linebreak - Sortörés kezelése
+* introdate - Dátum és időkezelés alapok
+* introcontrol - Bevezetés a vezérlési szerkezetekbe
+
+Bonyolultabb típusok
+
+* array - Tömbök
+* cmdarguments - Parancssori paraméterek
+* arrayofarrays - Tömbök tömbje
+* arrays - Tömbök kezelése
+* arraylist - Lista
+* aslist - Lista létrehozása
+* looptypes - Ciklusok fajtái
+* looptypesmodify - Módosítás bejáráskor
+* debug - Debug
+* finalmodifier - Konstans értékek használata
+* math - Math és Random osztály
+
+Részletesebben az osztályokról és objektumokról
+
+* objects - Objektumok
+* attributes - Bevezetés az attribútumok használatába
+* introconstructors - Bevezetés a konstruktorok használatába
+* intromethods - Bevezetés a metódusok használatába
+* references - Referenciák
+* composition - Kompozíció
+* compositionlist - Kompozíció listával
+
+Projektfeladat
+
+
+
+### A Java nyelv részletes megismerése
+
+Típusok és operátorok
+
+* literals - Literálok
+* primitivetypes - Egyszerű típusok
+* chars - Karakterek
+* enumtype - Felsorolásos típus
+* operators - Operátorok
+* typeconversion - Típuskonverzió
+* numbers - Egész és lebegőpontos számok
+* conversions - Különbségek a típuskonverzió, boxing és String műveletek között
+
+Részletesen a szöveges típusról
+
+* stringbasic - String alapok
+* stringconcat - Konkatenáció
+* stringmethods - Főbb String metódusok
+* stringbuilder - StringBuilder
+* stringscanner - Scanner
+* formatlocaleprintf - printf
+
+Unit tesztelés JUnittal
+
+* introjunit - Unit tesztelés JUnittal
+* junit5 - JUnit 5
+* junit5assert - JUnit assert metódusok
+* junit5fixture - Tesztesetek életciklusa
+
+Vezérlési szerkezetek
+
+* controlselection - Vezérlési szerkezetek és az elágazás
+* controliteration - Ciklusok
+* controladvanced - Haladó vezérlési szerkezetek
+
+Bevezetés a kivétel- és fájlkezelésbe
+
+* introexceptionfirstexception - Első kivétel
+* introexceptionmoreexceptions - További kivételek
+* introexceptiontrace - Kivétel a hívási láncban
+* introexceptiontrycatch - Kivétel kezelése
+* introexceptiontrycatchtrace - Kivétel kezelése a hívási láncban
+* introexceptionthrow - Kivétel eldobása
+* introexceptionthrowjunit4 - Kivételkezelés tesztelése JUnit 4 használatával
+* introexceptionthrowjunit5 - Kivételkezelés tesztelése JUnit 5 használatával
+* introexceptionreadfile - Fájl beolvasása
+* introexceptioncheckedtrace - Kötelezően kezelendő kivétel a hívási láncban
+* introexceptioncause - Kivétel becsomagolása
+* introexceptionreadfiletestjunit4 - Fájlbeolvasás tesztelése JUnit 4 használatával
+* introexceptionreadfiletestjunit5 - Fájlbeolvasás tesztelése JUnit 5 használatával
+* introexceptionwritefile - Fájl írása
+* introexceptionwritefiletestjunit4 - Fájl írásának tesztelése JUnit 4 használatával
+* introexceptionwritefiletestjunit5 - Fájl írásának tesztelése JUnit 5 használatával
+* introexceptionfinally - A finally ág
+
+Programozási tételek és egyéb algoritmusok
+
+* algorithmssum - Összegzés tétele
+* algorithmscount - Számlálás tétele
+* algorithmsmax - Szélsőérték-keresés tétele
+* algorithmsdecision - Eldöntés tétele
+* algorithmsfilter - Szűrés
+* algorithmstransformation - Transzformáció
+* recursion - Rekurzió
+
+Projektfeladat
+
+
+
+### Objektumorientáltság
+
+Attribútumok és metódusok
+
+* immutable - Immutable objektumok
+* javabeans - JavaBeans objektumok
+* methodstructure - Metódusok
+* methodpass - Értékmásolás szerinti paraméterátadás
+* methodparam - Metódus paraméterek és visszatérési értékek
+* methodvarargs - Változó hosszúságú paraméterlista
+* methodchain - Metódus hívások láncolása
+* methodoverloading - Metódusnév túlterhelés
+* staticattrmeth - Statikus attribútumok és metódusok
+
+Konstruktorok és inicializátorok
+
+* defaultconstructor - Default és paraméter nélküli konstruktor
+* constructoroverloading - Konstruktor túlterhelés
+* initializer - Inicializátorok
+
+Öröklődés
+
+* introinheritance - Öröklődés
+* inheritanceconstructor - Konstruktorok és az öröklődés viszonya
+* objectclass - Object ősosztály
+* inheritanceattributes - Attribútumok öröklődése
+* inheritancemethods - Metódusok öröklődése
+
+Absztrakt osztályok és interfészek
+
+* abstractclass - Absztrakt osztályok
+* interfaces - Interfészek
+* interfacerules - Interfészekkel kapcsolatos szabályok
+* interfacedependencyinversion - Dependency inversion
+* interfacedefaultmethods - Default interfész metódusok
+* interfacestaticmethods - Statikus interfész metódusok
+* interfaceextends - Interfészek és az öröklődés viszonya
+* enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban
+* statemachine - Állapotgép
+
+Haladó OO elvek
+
+* polymorphism - Polimorfizmus
+* virtualmethod - Dinamikus kötés
+* isahasa - is-a has-a kapcsolatok
+
+Projektfeladat
+
+
+
+### Kivétel- és fájlkezelés
+
+Kivételkezelés
+
+* exceptions - Kivételkezelés
+* exceptionclass - Saját kivétel
+* exceptionmulticatch - Multi catch
+

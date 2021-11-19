@@ -17,39 +17,20 @@ public class Bank {
         int amount = scanner.nextInt();
         scanner.nextLine();
 
-        BankAccount account1 = new BankAccount(accountNumber, owner, amount);
+        BankAccount account = new BankAccount(accountNumber, owner, amount);
 
-        System.out.println("Mi az új számla száma?");
-        String accountNumber2 = scanner.nextLine();
+        System.out.println(account.getInfo());
 
-        System.out.println("Ki a tulajdonos?");
-        String owner2 = scanner.nextLine();
-
-        System.out.println("Mekkora összeggel nyitja?");
-        int amount2 = scanner.nextInt();
-
-        BankAccount account2 = new BankAccount(accountNumber2, owner2, amount2);
-
-        System.out.println(account1.getInfo());
-        System.out.println(account2.getInfo());
-
-        System.out.println("Mennyit szeretne befizetni az első számlára?");
+        System.out.println("Mennyit szeretne befizetni a számlára?");
         int depositAmount = scanner.nextInt();
-        account1.deposit(depositAmount);
+        account.deposit(depositAmount);
 
-        System.out.println(account1.getInfo());
+        System.out.println(account.getInfo());
 
-        System.out.println("Mennyit szeretne felvenni a második számláról?");
+        System.out.println("Mennyit szeretne felvenni a számláról?");
         int withdrawAmount = scanner.nextInt();
-        account2.withdraw(withdrawAmount);
+        account.withdraw(withdrawAmount);
 
-        System.out.println(account2.getInfo());
-
-        System.out.println("Mennyit szeretne átutalni az első számláról a másodikra?");
-        int transferAmount = scanner.nextInt();
-        account1.transfer(account2, transferAmount);
-
-        System.out.println(account1.getInfo());
-        System.out.println(account2.getInfo());
+        System.out.println(account.getInfo());
     }
 }

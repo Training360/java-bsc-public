@@ -1,11 +1,6 @@
 package exceptionmulticatch.converter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
 public class AnswerStat {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AnswerStat.class);
 
     private BinaryStringConverter converter;
 
@@ -28,7 +23,6 @@ public class AnswerStat {
         try {
             return converter.binaryStringToBooleanArray(checkboxes);
         } catch (NullPointerException | IllegalArgumentException ex) {
-            LOGGER.error(ex.getMessage(), ex);
             throw new InvalidBinaryStringException(ex);
         }
     }
