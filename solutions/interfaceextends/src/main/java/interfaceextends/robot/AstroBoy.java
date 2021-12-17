@@ -3,19 +3,17 @@ package interfaceextends.robot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AstroBoy implements FlyableRobot{
+public class AstroBoy implements FlyableRobot {
+
+	public static final long ALTITUDE = 5;
 
 	private Point position;
+
 	private int angle;
+
 	private List<Point> path = new ArrayList<>();
-	public final static long ALTITUDE = 5;
 
 	public AstroBoy(Point position) {
-		this.position = position;
-	}
-
-	public void walkTo(Point position) {
-		path.add(position);
 		this.position = position;
 	}
 
@@ -64,5 +62,10 @@ public class AstroBoy implements FlyableRobot{
 
 	public long getAltitude() {
 		return position.getZ();
+	}
+
+	private void walkTo(Point position) {
+		path.add(position);
+		this.position = position;
 	}
 }

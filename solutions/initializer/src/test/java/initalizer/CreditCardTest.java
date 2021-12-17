@@ -6,25 +6,16 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+class CreditCardTest {
 
-public class CreditCardTest {
-
-    public final Rate[] rates = {new Rate(Currency.HUF, 1.0),
+    final Rate[] rates = {new Rate(Currency.HUF, 1.0),
             new Rate(Currency.EUR, 308.23),
-            new Rate(Currency.SFR, 289.24),
+            new Rate(Currency.CHF, 289.24),
             new Rate(Currency.GBP, 362.23),
             new Rate(Currency.USD, 289.77)};
 
-//        ACTUAL_RATES.add(new Rate(Currency.HUF, 1.0));
-//        ACTUAL_RATES.add(new Rate(Currency.EUR, 308.23));
-//        ACTUAL_RATES.add(new Rate(Currency.SFR, 289.24));
-//        ACTUAL_RATES.add(new Rate(Currency.GBP, 362.23));
-//        ACTUAL_RATES.add(new Rate(Currency.USD, 289.77));
-//    }
-
-
     @Test
-    public void testConstructorW3Parameters() {
+    void testCreateWithThreeParameters() {
         //Given
         CreditCard card = new CreditCard(1000, Currency.EUR, Arrays.asList(rates));
         //Then
@@ -32,7 +23,7 @@ public class CreditCardTest {
     }
 
     @Test
-    public void testConstructorW1Parameter() {
+    void testCreateWithOneParameter() {
         //Given
         CreditCard card = new CreditCard(100_000);
         //Then
@@ -40,7 +31,7 @@ public class CreditCardTest {
     }
 
     @Test
-    public void testPaymentW2ParametersSuccess() {
+    void testPaymentWithTwoParametersSuccess() {
         //Given
         CreditCard card = new CreditCard(100_000);
         //Then
@@ -49,7 +40,7 @@ public class CreditCardTest {
     }
 
     @Test
-    public void testPaymentW2ParametersFail() {
+    void testPaymentWithTwoParametersFail() {
         //Given
         CreditCard card = new CreditCard(100_000);
         //Then
@@ -58,7 +49,7 @@ public class CreditCardTest {
     }
 
     @Test
-    public void testPaymentW1ParameterSuccess() {
+    void testPaymentWithOneParameterSuccess() {
         //Given
         CreditCard card = new CreditCard(100_000);
         //Then
@@ -67,7 +58,7 @@ public class CreditCardTest {
     }
 
     @Test
-    public void testPaymentW1ParameterFail() {
+    void testPaymentWithOneParameterFail() {
         //Given
         CreditCard card = new CreditCard(100_000);
         //Then
