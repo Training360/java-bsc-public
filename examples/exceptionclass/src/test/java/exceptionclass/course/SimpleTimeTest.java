@@ -1,4 +1,4 @@
-package course;
+package exceptionclass.course;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class SimpleTimeTest {
 
     @Test
-    void testInvalidHourShouldThrowException() {
+    void testInvalidHour() {
         int hour = 24;
         int minute = 1;
 
@@ -17,7 +17,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    public void testInvalidMinuteShouldThrowException() {
+    public void testInvalidMinute() {
         int hour = 1;
         int minute = 60;
 
@@ -53,7 +53,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    void testInvalideDelimiterShouldThrowException() {
+    void testInvalidDelimiterShouldThrowException() {
         String timeString = "12,23";
 
         InvalidTimeException itex = assertThrows(InvalidTimeException.class, () -> new SimpleTime(timeString));
@@ -61,7 +61,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    void testInvalideNumberShouldThrowException() {
+    void testInvalidNumberShouldThrowException() {
         String timeString = "a1:23";
 
         InvalidTimeException itex = assertThrows(InvalidTimeException.class, () -> new SimpleTime(timeString));
@@ -69,7 +69,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    void testInvalideHourShouldThrowException() {
+    void testInvalidHourShouldThrowException() {
         String timeString = "24:23";
 
         InvalidTimeException itex = assertThrows(InvalidTimeException.class, () -> new SimpleTime(timeString));
@@ -77,7 +77,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    void testInvalideMinuteShouldThrowException() {
+    void testInvalidMinuteShouldThrowException() {
         String timeString = "12:60";
 
         InvalidTimeException itex = assertThrows(InvalidTimeException.class, () -> new SimpleTime(timeString));

@@ -1,4 +1,4 @@
-package course;
+package exceptionclass.course;
 
 import org.junit.jupiter.api.Test;
 

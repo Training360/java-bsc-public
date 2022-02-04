@@ -1,4 +1,4 @@
-package bank;
+package exceptionclass.bank;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;

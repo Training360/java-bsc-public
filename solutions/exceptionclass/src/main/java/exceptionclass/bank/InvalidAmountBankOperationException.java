@@ -1,4 +1,4 @@
-package bank;
+package exceptionclass.bank;
 
 public class InvalidAmountBankOperationException extends InvalidBankOperationException {
 

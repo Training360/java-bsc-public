@@ -1,4 +1,4 @@
-package course;
+package exceptionclass.course;
 
 public class SimpleTime {
 

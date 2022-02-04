@@ -1,7 +1,3 @@
-# JAVA-BSC - Java SE alapok
-
-## Tematika
-
 ### Bevezetés a nyelvi eszközökbe
 
 Eszközkészlet
@@ -58,10 +54,6 @@ Részletesebben az osztályokról és objektumokról
 * references - Referenciák
 * composition - Kompozíció
 * compositionlist - Kompozíció listával
-
-Projektfeladat
-
-
 
 ### A Java nyelv részletes megismerése
 
@@ -128,10 +120,6 @@ Programozási tételek és egyéb algoritmusok
 * algorithmstransformation - Transzformáció
 * recursion - Rekurzió
 
-Projektfeladat
-
-
-
 ### Objektumorientáltság
 
 Attribútumok és metódusok
@@ -156,6 +144,7 @@ Konstruktorok és inicializátorok
 
 * introinheritance - Öröklődés
 * inheritanceconstructor - Konstruktorok és az öröklődés viszonya
+* dynamictypes - Statikus és dinamikus típus
 * objectclass - Object ősosztály
 * inheritanceattributes - Attribútumok öröklődése
 * inheritancemethods - Metódusok öröklődése
@@ -166,11 +155,14 @@ Absztrakt osztályok és interfészek
 * interfaces - Interfészek
 * interfacerules - Interfészekkel kapcsolatos szabályok
 * interfacedependencyinversion - Dependency inversion
+* interfaceextends - Interfészek és az öröklődés viszonya
 * interfacedefaultmethods - Default interfész metódusok
 * interfacestaticmethods - Statikus interfész metódusok
-* interfaceextends - Interfészek és az öröklődés viszonya
 * enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban
 * statemachine - Állapotgép
+
+
+### Haladó objektumorientáltság és kivételkezelés
 
 Haladó OO elvek
 
@@ -178,15 +170,9 @@ Haladó OO elvek
 * virtualmethod - Dinamikus kötés
 * isahasa - is-a has-a kapcsolatok
 
-Projektfeladat
-
-
-
-### Kivétel- és fájlkezelés
-
-Kivételkezelés
+Haladó kivételkezelés
 
 * exceptions - Kivételkezelés
 * exceptionclass - Saját kivétel
 * exceptionmulticatch - Multi catch
-
+* exceptionresource - Try-With-Resources szerkezet
