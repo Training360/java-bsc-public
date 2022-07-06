@@ -55,6 +55,10 @@ Részletesebben az osztályokról és objektumokról
 * composition - Kompozíció
 * compositionlist - Kompozíció listával
 
+Projektfeladat
+
+* meetingrooms - Projektfeladat - Tárgyaló nyilvántartás
+
 ### A Java nyelv részletes megismerése
 
 Típusok és operátorok
@@ -120,6 +124,10 @@ Programozási tételek és egyéb algoritmusok
 * algorithmstransformation - Transzformáció
 * recursion - Rekurzió
 
+Projektfeladat
+
+* schoolrecords - Projektfeladat - Elektronikus osztálynapló
+
 ### Objektumorientáltság
 
 Attribútumok és metódusok
@@ -176,3 +184,7 @@ Haladó kivételkezelés
 * exceptionclass - Saját kivétel
 * exceptionmulticatch - Multi catch
 * exceptionresource - Try-With-Resources szerkezet
+
+Projektfeladat
+
+* catalog - Projektfeladat - Könyvtárkatalógus
