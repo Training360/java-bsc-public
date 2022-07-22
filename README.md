@@ -1,10 +1,12 @@
+## Tematika
+
 ### Bevezetés a nyelvi eszközökbe
+
+Java SE alapok - Bevezetés
+
 
 Eszközkészlet
 
-* background - Java történeti háttér
-* installjdk - Oracle JDK telepítése
-* introjdk - Java platform
 * intromaven - Maven
 * introide - IDE
 * introgit - Git használata az IDE-ben
@@ -59,6 +61,7 @@ Projektfeladat
 
 * meetingrooms - Projektfeladat - Tárgyaló nyilvántartás
 
+
 ### A Java nyelv részletes megismerése
 
 Típusok és operátorok
@@ -68,18 +71,10 @@ Típusok és operátorok
 * chars - Karakterek
 * enumtype - Felsorolásos típus
 * operators - Operátorok
+* mathproblems - Oszthatóság vizsgálata
 * typeconversion - Típuskonverzió
 * numbers - Egész és lebegőpontos számok
 * conversions - Különbségek a típuskonverzió, boxing és String műveletek között
-
-Részletesen a szöveges típusról
-
-* stringbasic - String alapok
-* stringconcat - Konkatenáció
-* stringmethods - Főbb String metódusok
-* stringbuilder - StringBuilder
-* stringscanner - Scanner
-* formatlocaleprintf - printf
 
 Unit tesztelés JUnittal
 
@@ -87,6 +82,16 @@ Unit tesztelés JUnittal
 * junit5 - JUnit 5
 * junit5assert - JUnit assert metódusok
 * junit5fixture - Tesztesetek életciklusa
+
+Részletesen a szöveges típusról
+
+* stringbasic - String alapok
+* stringconcat - Konkatenáció
+* stringmethods - Főbb String metódusok
+* stringbuilder - StringBuilder
+* stringseparate - Szövegek elválasztása vesszővel
+* stringscanner - Scanner
+* formatlocaleprintf - printf
 
 Vezérlési szerkezetek
 
@@ -127,6 +132,7 @@ Programozási tételek és egyéb algoritmusok
 Projektfeladat
 
 * schoolrecords - Projektfeladat - Elektronikus osztálynapló
+
 
 ### Objektumorientáltság
 

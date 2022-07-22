@@ -17,7 +17,7 @@ public class University {
 
     public boolean areEqual(Student student, Student anotherStudent) {
         String studentNeptunCode = student.getNeptunCode();
-        String anotherStudentNeptunCode = student.getNeptunCode();
+        String anotherStudentNeptunCode = anotherStudent.getNeptunCode();
         String studentEducationalId = student.getEducationalId();
         String anotherStudentEducationalId = anotherStudent.getEducationalId();
 

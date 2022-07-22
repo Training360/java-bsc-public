@@ -25,16 +25,4 @@ public class Run {
         double km = kms.get(kms.size() - 1);
         return String.format(RUN_TEXT, runnerName, dateString, days, km);
     }
-
-    public static void main(String[] args) {
-        Run run = new Run("Kiss Béla");
-        run.addRun(13.40);
-        System.out.println(run.printFormattedRunText());
-        run.addRun(9.30);
-        System.out.println(run.printFormattedRunText());
-        run.addRun(10.60);
-        System.out.println(run.printFormattedRunText());
-        run.addRun(12.80);
-        System.out.println(run.printFormattedRunText());
-    }
 }

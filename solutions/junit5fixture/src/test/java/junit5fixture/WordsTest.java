@@ -27,17 +27,17 @@ class WordsTest {
     }
 
     @Test
-    void testGetWordsStartWith() {
+    void testRemoveWordsWithoutLetter() {
         List<String> expected = Arrays.asList("három", "hat", "hét");
-        words.getWordsStartWith("h");
+        words.removeWordsWithoutLetter("h");
 
         assertEquals(expected, words.getWords());
     }
 
     @Test
-    void testGetWordsWithLength() {
+    void testRemoveWordsWithOtherLength() {
         List<String> expected = Arrays.asList("kettő", "három", "nyolc");
-        words.getWordsWithLength(5);
+        words.removeWordsWithOtherLength(5);
 
         assertEquals(expected, words.getWords());
     }

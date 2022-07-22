@@ -3,7 +3,7 @@ package inheritancemethods.cars;
 public class Car {
 
     private double fuelRate;
-    private double fuel;
+    protected double fuel;
     private double tankCapacity;
 
     public Car(double fuelRate, double fuel, double tankCapacity) {

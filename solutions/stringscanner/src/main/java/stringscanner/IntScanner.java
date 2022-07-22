@@ -20,14 +20,4 @@ public class IntScanner {
         }
         return result.substring(0, result.length() - 1);
     }
-
-    public static void main(String[] args) {
-        IntScanner intScanner = new IntScanner();
-
-        System.out.println(intScanner.convertInts("5;3;107;12;123;18;198"));
-        System.out.println(intScanner.convertInts("107"));
-        System.out.println(intScanner.convertInts("5;2;3;7;89;10"));
-        System.out.println(intScanner.convertInts("5"));
-        System.out.println(intScanner.convertInts(""));
-    }
 }

@@ -15,21 +15,21 @@ public class Words {
         words.add(word);
     }
 
-    public void getWordsStartWith(String prefix) {
+    public void removeWordsWithoutLetter(String letter) {
         List<String> wordsToRemove = new ArrayList<>();
-        for (String s : words) {
-            if (!s.startsWith(prefix)) {
-                wordsToRemove.add(s);
+        for (String word : words) {
+            if (word.indexOf(letter) == -1) {
+                wordsToRemove.add(word);
             }
         }
         words.removeAll(wordsToRemove);
     }
 
-    public void getWordsWithLength(int length) {
+    public void removeWordsWithOtherLength(int length) {
         List<String> wordsToRemove = new ArrayList<>();
-        for (String s : words) {
-            if (s.length() != length) {
-                wordsToRemove.add(s);
+        for (String word : words) {
+            if (word.length() != length) {
+                wordsToRemove.add(word);
             }
         }
         words.removeAll(wordsToRemove);

@@ -15,6 +15,19 @@ public class Jeep extends Car {
     }
 
     @Override
+    public void modifyFuelAmount(double fuel) {
+        if (fuel >= getTankCapacity() - getFuel() + extraCapacity - extraFuel) {
+            throw new IllegalArgumentException("Total capacity is less than fuel!");
+        } else if (fuel > getTankCapacity() - getFuel() && fuel <= getTankCapacity() - getFuel() + extraCapacity - extraFuel) {
+            double extra = fuel - getTankCapacity() + getFuel();
+            this.fuel += fuel - extra;
+            this.extraFuel += extra;
+        } else {
+            super.modifyFuelAmount(fuel);
+        }
+    }
+
+    @Override
     public void drive(int km) {
         if (!isEnoughFuelJeep(km)) {
             throw new IllegalArgumentException("Not enough fuel available!");

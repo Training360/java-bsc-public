@@ -2,8 +2,6 @@ package statements;
 
 public class Investment {
 
-    private double cost = 0.3;
-
     private int fund;
 
     private int interestRate;
@@ -24,7 +22,7 @@ public class Investment {
     }
 
     public double close(int days) {
-        double totalAmount = (getFund() + getYield(days)) * (1 - cost / 100);
+        double totalAmount = (getFund() + getYield(days)) * (1 - 0.3 / 100);
         double payout = active ? totalAmount : 0;
         active = false;
         return payout;
