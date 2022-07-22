@@ -1,4 +1,6 @@
-## Tematika
+# JAVA-BSC - Java SE alapok
+
+## Tartalomjegyzék
 
 ### Bevezetés a nyelvi eszközökbe
 
