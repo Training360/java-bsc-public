@@ -12,7 +12,7 @@ class CodesTest {
     @Test
     void testGetCodesStartWithLetter() {
         Codes code = new Codes();
-        List<String> codes = Arrays.asList("T57fbj", "xtcu45", "4CHU7", "857Gdob", "f578GVHd");
+        List<String> codes = Arrays.asList("T57fbj", "xtcu45", "4CHU7", "f578GVHd", "857Gdob");
 
         assertEquals("Betűvel kezdődő kódok: T57fbj, xtcu45, f578GVHd", code.getCodesStartWithLetter(codes));
     }
