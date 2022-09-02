@@ -12,7 +12,7 @@ public class Patient {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Name must not be empty");
         }
-        if (yearOfBirth <= MIN_YEAR) {
+        if (yearOfBirth < MIN_YEAR) {
             throw new IllegalArgumentException("Invalid year of birth: " + yearOfBirth);
         }
         this.name = name;

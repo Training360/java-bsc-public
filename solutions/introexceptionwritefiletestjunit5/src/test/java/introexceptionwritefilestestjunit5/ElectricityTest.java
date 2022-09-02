@@ -19,7 +19,7 @@ class ElectricityTest {
     File temporaryFolder;
 
     @Test
-    public void testWriteStreets() throws IOException {
+    void testWriteStreets() throws IOException {
         Path path = temporaryFolder.toPath().resolve("streets.txt");
         electricity.writeStreets(path);
         List<String> expected = Files.readAllLines(path);

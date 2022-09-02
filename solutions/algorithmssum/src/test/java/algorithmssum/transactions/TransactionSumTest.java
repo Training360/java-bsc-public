@@ -7,12 +7,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TransactionSumCalculatorTest {
+class TransactionSumTest {
 
     @Test
     void testSumAmountOfCreditEntries() {
 
-        TransactionSumCalculator calculator = new TransactionSumCalculator();
+        TransactionSum calculator = new TransactionSum();
 
         List<Transaction> transactions = Arrays.asList(
                 new Transaction("1234-2345-1231", TransactionOperation.CREDIT, 100000),

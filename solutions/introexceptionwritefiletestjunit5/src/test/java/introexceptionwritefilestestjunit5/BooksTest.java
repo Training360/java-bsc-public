@@ -19,7 +19,7 @@ class BooksTest {
     File temporaryFolder;
 
     @Test
-    public void testWriteBooks() throws IOException {
+    void testWriteBooks() throws IOException {
         Path path = temporaryFolder.toPath().resolve("books.txt");
         books.writeBooks(path);
         List<String> expected = Files.readAllLines(path);

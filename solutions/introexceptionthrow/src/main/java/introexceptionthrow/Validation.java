@@ -19,7 +19,7 @@ public class Validation {
             }
         }
         int age = Integer.parseInt(ageText);
-        if (age > 120) {
+        if (age < 0 || age > 120) {
             throw new IllegalArgumentException("Not valid age!");
         }
     }

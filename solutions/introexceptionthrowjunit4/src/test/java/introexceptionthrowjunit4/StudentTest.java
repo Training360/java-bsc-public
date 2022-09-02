@@ -25,7 +25,7 @@ public class StudentTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testAddNoteSimpleExpection() {
+    public void testAddNoteSimpleException() {
         student.addNote(6);
     }
 

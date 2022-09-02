@@ -9,7 +9,7 @@ class StudentTest {
     Student student = new Student();
 
     @Test
-    public void testAddNote() {
+    void testAddNote() {
         student.addNote(2);
         student.addNote(5);
         student.addNote(3);
@@ -19,7 +19,7 @@ class StudentTest {
     }
 
     @Test
-    public void testAddNoteInvalidNote() {
+    void testAddNoteInvalidNote() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> student.addNote(6));
         assertEquals("Note must be between 1 and 5!", exception.getMessage());

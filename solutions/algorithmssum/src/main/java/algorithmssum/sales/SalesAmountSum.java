@@ -2,7 +2,7 @@ package algorithmssum.sales;
 
 import java.util.List;
 
-public class SalesAmountSumCalculator {
+public class SalesAmountSum {
 
     public int sumSalesAmount(List<Salesperson> sales) {
         int sum = 0;

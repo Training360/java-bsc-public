@@ -8,12 +8,12 @@ import java.nio.file.Paths;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class RecipeTest {
+class RecipeTest {
 
-    private Recipe recipe = new Recipe();
+    Recipe recipe = new Recipe();
 
     @Test
-    public void testAddIngredients() {
+    void testAddIngredients() {
         Path path = Paths.get("src/test/resources/recipe.txt");
         recipe.addIngredients(path);
 
@@ -22,7 +22,7 @@ public class RecipeTest {
     }
 
     @Test
-    public void testAddIngredientsNotExistingFile() {
+    void testAddIngredientsNotExistingFile() {
         Path path = Paths.get("src/test/resources/xyz.txt");
 
         IllegalStateException exception = assertThrows(IllegalStateException.class,

@@ -21,7 +21,7 @@ public class Books {
 
     private List<String> readBooks() {
         try {
-            return Files.readAllLines(Paths.get("src/test/resources/books.txt"));
+            return Files.readAllLines(Paths.get("src/main/resources/books.txt"));
         } catch (IOException ioe) {
             throw new IllegalStateException("Can not read file.", ioe);
         }

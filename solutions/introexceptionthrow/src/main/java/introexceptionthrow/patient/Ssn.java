@@ -1,6 +1,6 @@
 package introexceptionthrow.patient;
 
-public class SsnValidator {
+public class Ssn {
 
     public boolean isValidSsn(String ssn) {
         if (ssn.length() != 9)

@@ -7,11 +7,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SalesAmountSumCalculatorTest {
+class SalesAmountSumTest {
 
     @Test
     void testSumSalesAmount() {
-        SalesAmountSumCalculator test = new SalesAmountSumCalculator();
+        SalesAmountSum test = new SalesAmountSum();
 
         List<Salesperson> salespersons = Arrays.asList(
                 new Salesperson("John", 600),

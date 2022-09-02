@@ -12,10 +12,10 @@ public class Patient {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Name must not be empty");
         }
-        if (yearOfBirth <= MIN_YEAR) {
+        if (yearOfBirth < MIN_YEAR) {
             throw new IllegalArgumentException("Invalid year of birth: " + yearOfBirth);
         }
-        if (!new SsnValidator().isValidSsn(ssn))
+        if (!new Ssn().isValidSsn(ssn))
             throw new IllegalArgumentException("Invalid Social Security Number: " + ssn);
         this.name = name;
         this.socialSecurityNumber = ssn;
