@@ -8,17 +8,17 @@ public class Validation {
         }
     }
 
-    public void validateAge(String ageString) {
-        if (ageString.length() == 0) {
+    public void validateAge(String ageText) {
+        if (ageText.length() == 0) {
             throw new IllegalArgumentException("Age can not be empty!");
         }
-        char[] chars = ageString.toCharArray();
+        char[] chars = ageText.toCharArray();
         for (char c : chars) {
             if (!Character.isDigit(c)) {
                 throw new IllegalArgumentException("Age is not a number!");
             }
         }
-        int age = Integer.parseInt(ageString);
+        int age = Integer.parseInt(ageText);
         if (age > 120) {
             throw new IllegalArgumentException("Not valid age!");
         }
