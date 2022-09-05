@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class VowelsTest {
 
     @Test
-    void testIsPalindrome() {
+    void testGetNumberOfVowels() {
         Vowels vowels = new Vowels();
 
         assertEquals(0, vowels.getNumberOfVowels(""));
