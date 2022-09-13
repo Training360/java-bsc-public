@@ -1,4 +1,4 @@
-package initalizer;
+package initializer;
 
 public enum Currency {
 

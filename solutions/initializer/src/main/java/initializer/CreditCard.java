@@ -1,6 +1,7 @@
-package initalizer;
+package initializer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CreditCard {
@@ -9,8 +10,18 @@ public class CreditCard {
 
     private long balance;
 
-    public CreditCard(long balance, Currency currency, List<Rate> upload) {
-        ACTUAL_RATES.addAll(upload);
+    static {
+        List<Rate> rates = Arrays.asList(
+                new Rate(Currency.HUF, 1.0),
+                new Rate(Currency.EUR, 308.23),
+                new Rate(Currency.CHF, 289.24),
+                new Rate(Currency.GBP, 362.23),
+                new Rate(Currency.USD, 289.77)
+        );
+        ACTUAL_RATES.addAll(rates);
+    }
+
+    public CreditCard(long balance, Currency currency) {
         this.balance = Math.round(balance * getConversionRate(currency));
     }
 

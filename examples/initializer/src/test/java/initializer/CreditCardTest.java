@@ -1,23 +1,15 @@
-package initalizer;
+package initializer;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CreditCardTest {
 
-    final Rate[] rates = {new Rate(Currency.HUF, 1.0),
-            new Rate(Currency.EUR, 308.23),
-            new Rate(Currency.CHF, 289.24),
-            new Rate(Currency.GBP, 362.23),
-            new Rate(Currency.USD, 289.77)};
-
     @Test
     void testCreateWithThreeParameters() {
         //Given
-        CreditCard card = new CreditCard(1000, Currency.EUR, Arrays.asList(rates));
+        CreditCard card = new CreditCard(1000, Currency.EUR);
         //Then
         assertEquals(308_230L, card.getBalance());
     }
