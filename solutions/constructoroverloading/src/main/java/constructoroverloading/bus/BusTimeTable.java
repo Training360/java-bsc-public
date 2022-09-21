@@ -24,9 +24,9 @@ public class BusTimeTable {
     }
 
     public SimpleTime getNextBus(SimpleTime actual) {
-        for (int i = 0; i < timeTable.size(); i++) {
-            if (timeTable.get(i).getDifference(actual) >= 0) {
-                return timeTable.get(i);
+        for (SimpleTime time : timeTable) {
+            if (time.getDifference(actual) >= 0) {
+                return time;
             }
         }
         throw new IllegalStateException("No more buses today!");

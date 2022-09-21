@@ -6,9 +6,9 @@ public class Pendrives {
 
     public Pendrive getBest(List<Pendrive> pendrives) {
         Pendrive min = pendrives.get(0);
-        for (int j = 0; j < pendrives.size(); j++) {
-            if (min.comparePricePerCapacity(pendrives.get(j)) == 1) {
-                min = pendrives.get(j);
+        for (Pendrive p : pendrives) {
+            if (min.comparePricePerCapacity(p) == 1) {
+                min = p;
             }
         }
         return min;
@@ -16,9 +16,9 @@ public class Pendrives {
 
     public Pendrive getCheapest(List<Pendrive> pendrives) {
         Pendrive min = pendrives.get(0);
-        for (int j = 0; j < pendrives.size(); j++) {
-            if (pendrives.get(j).isCheaperThan(min)) {
-                min = pendrives.get(j);
+        for (Pendrive p : pendrives) {
+            if (p.isCheaperThan(min)) {
+                min = p;
             }
         }
         return min;

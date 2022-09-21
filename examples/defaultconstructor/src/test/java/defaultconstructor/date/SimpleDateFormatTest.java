@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SimpleDateFormatterTest {
+class SimpleDateFormatTest {
 
     SimpleDate simpleDate;
 
@@ -23,21 +23,21 @@ class SimpleDateFormatterTest {
 
     @Test
     void testFormatDateStringByCountryCodeHU() {
-        assertEquals("2016-2-29", new SimpleDateFormatter().formatDateStringByCountryCode(CountryCode.HU, simpleDate));
+        assertEquals("2016-2-29", new SimpleDateFormat().formatDateStringByCountryCode(CountryCode.HU, simpleDate));
     }
 
     @Test
     void testFormatDateStringByCountryCodeEN() {
-        assertEquals("29-2-2016", new SimpleDateFormatter().formatDateStringByCountryCode(CountryCode.EN, simpleDate));
+        assertEquals("29-2-2016", new SimpleDateFormat().formatDateStringByCountryCode(CountryCode.EN, simpleDate));
     }
 
     @Test
     void testFormatDateStringByCountryCodeUS() {
-        assertEquals("2-29-2016", new SimpleDateFormatter().formatDateStringByCountryCode(CountryCode.US, simpleDate));
+        assertEquals("2-29-2016", new SimpleDateFormat().formatDateStringByCountryCode(CountryCode.US, simpleDate));
     }
 
     @Test
     void testFormatDateString() {
-        assertEquals("2016-2-29", new SimpleDateFormatter().formatDateString(simpleDate));
+        assertEquals("2016-2-29", new SimpleDateFormat().formatDateString(simpleDate));
     }
 }

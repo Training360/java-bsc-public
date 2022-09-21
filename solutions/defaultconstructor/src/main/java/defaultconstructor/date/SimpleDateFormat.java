@@ -1,11 +1,11 @@
 package defaultconstructor.date;
 
-public class SimpleDateFormatter {
+public class SimpleDateFormat {
 
     public static final String SEPARATOR = "-";
     private CountryCode defaultCountry;
 
-    public SimpleDateFormatter() {
+    public SimpleDateFormat() {
         this.defaultCountry = CountryCode.HU;
     }
 
