@@ -13,21 +13,21 @@ public class SecondVaccine implements Vaccine {
     }
 
     @Override
-    public void generateVaccinationList(List<Person> registrated) {
-        addYoungPeopleToVaccinationList(registrated);
-        addEldersToVaccinationList(registrated);
+    public void generateVaccinationList(List<Person> registered) {
+        addYoungPeopleToVaccinationList(registered);
+        addEldersToVaccinationList(registered);
     }
 
-    private void addYoungPeopleToVaccinationList(List<Person> registrated) {
-        for (Person p : registrated) {
+    private void addYoungPeopleToVaccinationList(List<Person> registered) {
+        for (Person p : registered) {
             if (p.getAge() <= 65 && p.getPregnant() == Pregnancy.NO && p.getChronic() == ChronicDisease.NO) {
                 vaccinationList.add(p);
             }
         }
     }
 
-    private void addEldersToVaccinationList(List<Person> registrated) {
-        for (Person p : registrated) {
+    private void addEldersToVaccinationList(List<Person> registered) {
+        for (Person p : registered) {
             if (p.getAge() > 65 && p.getPregnant() == Pregnancy.NO && p.getChronic() == ChronicDisease.NO) {
                 vaccinationList.add(p);
             }

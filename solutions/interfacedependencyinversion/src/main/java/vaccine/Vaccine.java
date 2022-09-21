@@ -6,5 +6,5 @@ public interface Vaccine {
 
     List<Person> getVaccinationList();
 
-    void generateVaccinationList(List<Person> registrated);
+    void generateVaccinationList(List<Person> registered);
 }
