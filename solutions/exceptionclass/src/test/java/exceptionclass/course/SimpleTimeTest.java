@@ -17,7 +17,7 @@ class SimpleTimeTest {
     }
 
     @Test
-    public void testInvalidMinute() {
+    void testInvalidMinute() {
         int hour = 1;
         int minute = 60;
 
