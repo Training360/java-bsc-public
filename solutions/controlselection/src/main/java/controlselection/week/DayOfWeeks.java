@@ -3,7 +3,7 @@ package controlselection.week;
 public class DayOfWeeks {
 
     public String whichDay(String day) {
-        switch (day.toLowerCase()) {
+        switch (day) {
             case "hétfő":
                 return "hét eleje";
             case "kedd":

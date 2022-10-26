@@ -15,11 +15,6 @@ class DayInMonthTest {
     }
 
     @Test
-    void testCase() {
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "MáJuS"));
-    }
-
-    @Test
     void testLeapYear() {
         assertEquals(29, new DayInMonth().numberOfDays(2012, "február"));
     }

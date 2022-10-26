@@ -15,11 +15,6 @@ class DayOfWeeksTest {
     }
 
     @Test
-    void testCase() {
-        assertEquals("hét eleje", new DayOfWeeks().whichDay("hÉtfŐ"));
-    }
-
-    @Test
     void testIllegalDay() {
         assertEquals("ismeretlen nap", new DayOfWeeks().whichDay("abc"));
     }

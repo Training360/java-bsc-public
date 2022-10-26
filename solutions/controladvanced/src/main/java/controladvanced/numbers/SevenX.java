@@ -16,7 +16,7 @@ public class SevenX {
                 System.out.println("X");
                 continue;
             }
-            if (Integer.toString(i).contains("7")) {
+            if (Integer.toString(i).indexOf("7") >= 0) {
                 break;
             }
             System.out.println(i);

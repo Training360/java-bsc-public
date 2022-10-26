@@ -3,7 +3,7 @@ package controlselection.month;
 public class DayInMonth {
 
     public int numberOfDays(int year, String month) {
-        switch (month.toLowerCase()) {
+        switch (month) {
             case "január":
             case "március":
             case "május":
