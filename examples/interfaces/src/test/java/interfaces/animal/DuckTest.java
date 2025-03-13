@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DuckTest {
 
     @Test
-    void testGetNumberofLegs() {
+    void testGetNumberOfLegs() {
         Duck duck = new Duck();
 
         assertEquals(2, duck.getNumberOfLegs());

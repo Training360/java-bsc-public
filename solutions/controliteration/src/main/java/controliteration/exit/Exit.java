@@ -11,7 +11,7 @@ public class Exit {
 
         do {
             System.out.println("Az ügyfélszolgálat menüje jelenleg nem elérhető.");
-            System.out.println("Kilépés: 'x' billentyű megnyomásával");
+            System.out.println("Kilépés: x billentyű és Enter megnyomásával");
             answer = scanner.nextLine();
         } while (!answer.equals("x"));
     }

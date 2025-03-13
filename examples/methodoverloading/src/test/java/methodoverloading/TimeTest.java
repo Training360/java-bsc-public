@@ -51,10 +51,10 @@ class TimeTest {
         Time time = new Time(13, 14, 15);
         Time firstAnotherTime = new Time(13, 14, 15);
         Time secondAnotherTime = new Time(15, 16, 17);
-        Time thirdAnothertime = new Time(11, 12, 13);
+        Time thirdAnotherTime = new Time(11, 12, 13);
         //Then
         assertFalse(time.isEarlier(firstAnotherTime));
         assertTrue(time.isEarlier(secondAnotherTime));
-        assertFalse(time.isEarlier(thirdAnothertime));
+        assertFalse(time.isEarlier(thirdAnotherTime));
     }
 }

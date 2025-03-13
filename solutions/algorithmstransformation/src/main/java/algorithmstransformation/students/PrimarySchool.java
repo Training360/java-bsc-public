@@ -5,23 +5,23 @@ import java.util.List;
 
 public class PrimarySchool {
 
-    private List<Person> persons;
+    private List<Person> people;
 
-    public PrimarySchool(List<Person> persons) {
-        this.persons = persons;
+    public PrimarySchool(List<Person> people) {
+        this.people = people;
     }
 
-    public List<Person> getPersons() {
-        return persons;
+    public List<Person> getPeople() {
+        return people;
     }
 
     public void addPerson(Person person) {
-        persons.add(person);
+        people.add(person);
     }
 
     public List<Student> getStudents() {
         List<Student> students = new ArrayList<>();
-        for (Person p : persons) {
+        for (Person p : people) {
             if (p.getAge() >= 6 && p.getAge() <= 14) {
                 Student student = new Student(p.getName(), p.getAddress());
                 students.add(student);

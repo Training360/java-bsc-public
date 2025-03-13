@@ -16,7 +16,7 @@ class FileNameTest {
 
     @Test
     void testFindFileExtension() {
-        assertEquals(".dat", fileName.findFileExtension("record.dat"));
+        assertEquals("dat", fileName.findFileExtension("record.dat"));
     }
 
     @Test

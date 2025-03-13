@@ -1,9 +1,2 @@
 target
-
 .idea
-.mvn
-*.iml
-
-.settings
-.classpath
-.project

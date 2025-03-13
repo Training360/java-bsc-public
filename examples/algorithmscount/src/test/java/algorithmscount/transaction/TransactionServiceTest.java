@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TransactionCounterTest {
+class TransactionServiceTest {
 
     @Test
     void testCountEntryLessThan() {
@@ -19,8 +19,8 @@ class TransactionCounterTest {
                 new Transaction("1234", TransactionType.DEBIT, 8000)
         );
 
-        assertEquals(1, new TransactionCounter().countEntryLessThan(transactions, 2000));
-        assertEquals(0, new TransactionCounter().countEntryLessThan(transactions, 1000));
-        assertEquals(4, new TransactionCounter().countEntryLessThan(transactions, 10000));
+        assertEquals(1, new TransactionService().countEntryLessThan(transactions, 2000));
+        assertEquals(0, new TransactionService().countEntryLessThan(transactions, 1000));
+        assertEquals(4, new TransactionService().countEntryLessThan(transactions, 10000));
     }
 }

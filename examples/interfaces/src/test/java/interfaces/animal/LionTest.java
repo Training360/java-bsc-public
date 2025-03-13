@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class LionTest {
 
     @Test
-    void testGetNumberofLegs() {
+    void testGetNumberOfLegs() {
         Lion lion = new Lion();
 
         assertEquals(4, lion.getNumberOfLegs());

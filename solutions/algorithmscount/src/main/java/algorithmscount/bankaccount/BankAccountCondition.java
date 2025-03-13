@@ -2,7 +2,7 @@ package algorithmscount.bankaccount;
 
 import java.util.List;
 
-public class BankAccountConditionCounter {
+public class BankAccountCondition {
 
     public int countWithBalanceGreaterThan(List<BankAccount> accounts, int minBalance) {
         int count = 0;

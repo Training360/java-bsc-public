@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class BankAccountConditionCounterTest {
+class BankAccountConditionTest {
 
     @Test
     void testCountWithBalanceGreaterThan() {
@@ -17,7 +17,7 @@ class BankAccountConditionCounterTest {
                 new BankAccount("Joe Doe", "123", 300),
                 new BankAccount("Jennifer Doe", "123", 400));
 
-        assertEquals(3, new BankAccountConditionCounter().countWithBalanceGreaterThan(bankAccounts, 100));
-        assertEquals(0, new BankAccountConditionCounter().countWithBalanceGreaterThan(bankAccounts, 400));
+        assertEquals(3, new BankAccountCondition().countWithBalanceGreaterThan(bankAccounts, 100));
+        assertEquals(0, new BankAccountCondition().countWithBalanceGreaterThan(bankAccounts, 400));
     }
 }

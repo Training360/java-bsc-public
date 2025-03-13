@@ -2,7 +2,7 @@ package algorithmscount.transaction;
 
 import java.util.List;
 
-public class TransactionCounter {
+public class TransactionService {
 
     public int countEntryLessThan(List<Transaction> transactions, int maxAmount) {
         int count = 0;

@@ -10,7 +10,7 @@ public class FileName {
 
     public String findFileExtension(String fileName) {
         fileName = fileName.trim();
-        int index = fileName.lastIndexOf('.');
+        int index = fileName.lastIndexOf('.') + 1;
 
         return fileName.substring(index);
     }

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class WormTest {
 
     @Test
-    void testGetNumberofLegs() {
+    void testGetNumberOfLegs() {
         Worm worm = new Worm();
 
         assertEquals(0, worm.getNumberOfLegs());
