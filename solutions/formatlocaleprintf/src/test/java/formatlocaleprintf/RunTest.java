@@ -2,6 +2,8 @@ package formatlocaleprintf;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RunTest {
@@ -12,8 +14,9 @@ class RunTest {
     void testFirstRun() {
         run.addRun(13.40);
 
+        String today = LocalDate.now().toString();
         assertEquals(
-                "Kedves Kiss Béla! A mai dátum: 2024-10-23. Ezen a héten ez a(z) 1. futásod. Most 13,4 km-t futottál. Csak így tovább!",
+                "Kedves Kiss Béla! A mai dátum: " + today + ". Ezen a héten ez a(z) 1. futásod. Most 13,4 km-t futottál. Csak így tovább!",
                 run.printFormattedRunText());
     }
 
@@ -24,7 +27,9 @@ class RunTest {
         run.addRun(10.60);
         run.addRun(12.80);
 
-        assertEquals("Kedves Kiss Béla! A mai dátum: 2024-10-23. Ezen a héten ez a(z) 4. futásod. Most 12,8 km-t futottál. Csak így tovább!",
+        String today = LocalDate.now().toString();
+
+        assertEquals("Kedves Kiss Béla! A mai dátum: " + today + ". Ezen a héten ez a(z) 4. futásod. Most 12,8 km-t futottál. Csak így tovább!",
                 run.printFormattedRunText());
     }
 }
